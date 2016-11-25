@@ -1,0 +1,1 @@
+<?=SITE_TEMPLATE_PATH;?>/images/new_logo.png

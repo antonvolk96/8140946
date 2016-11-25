@@ -1,0 +1,2 @@
+rrApi.pageViewCompleted({})
+rrApi._initialize({"YmlStatus":true,"MarginTestEnable":false,"TestEnabled":false,"IsShowCartWidgetAutomaticly":false,"ActiveWidgetIds":["552ccef36636b41010072dc5","552ccef36636b41010072dc9","552ccef36636b41010072dca","552ccef36636b41010072dcd"],"ServicePages":[],"RrSessionId":"58371e876636b32a2886ecd1","Guid":"583725ee68e9a686ac59f90e","GaAccountId":null,"TestStartDate":null,"AddToBasketClientJsCode":null,"PopupWidgetId":"000000000000000000000000","PartnerId":"552ccef36636b41010072dc3","UserId":"58371e876636b32a2886ecd1"})
