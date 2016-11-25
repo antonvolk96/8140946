@@ -21,9 +21,8 @@ Loc::loadMessages(__FILE__);?>
     <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/slick-theme.css");?>
     <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/media-queries.css");?>
 
-
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/watch.js", true);?>
-    <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jsonp.js", true);?>
+    <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/analytics.js", true);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/api.js", true);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jquery-1.11.1.min.js", true);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jquery-ui.min.js", true);?>
@@ -39,6 +38,7 @@ Loc::loadMessages(__FILE__);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/votes.js", true);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/jquery.zoom.min.js", true);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/openapi.js", true);?>
+
 </head>
 <body>
 <?$APPLICATION->ShowPanel();?>
