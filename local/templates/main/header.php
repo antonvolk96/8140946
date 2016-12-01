@@ -223,31 +223,65 @@ Loc::loadMessages(__FILE__);?>
 
     </style>
     <?if ($GLOBALS["APPLICATION"]->GetCurPage() == "/"):?>
-    <div class="slideshow" style="z-index: 1">
-        <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 694px;"><ul id="slideshow1" style="width: auto; position: relative; height: 0px;">
-                    <li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;">
-                        <a href="/blog/?page_id=430380">
-                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/adidas-reveals-harden-vol-1-imma-be-a-star-colorway.jpg" style=" position: absolute;">&lt;</a>
-                        <div class="descSlide">
-                            <div class="titleSlide" style="color: #fff">Adidas harden vol 1</div>
-                        </div>
+        <?$APPLICATION->IncludeComponent("bitrix:photo.section", "slider", Array(
+	"ADD_SECTIONS_CHAIN" => "N",	// Включать раздел в цепочку навигации
+		"AJAX_MODE" => "N",	// Включить режим AJAX
+		"AJAX_OPTION_ADDITIONAL" => "",	// Дополнительный идентификатор
+		"AJAX_OPTION_HISTORY" => "N",	// Включить эмуляцию навигации браузера
+		"AJAX_OPTION_JUMP" => "N",	// Включить прокрутку к началу компонента
+		"AJAX_OPTION_STYLE" => "Y",	// Включить подгрузку стилей
+		"BROWSER_TITLE" => "-",	// Установить заголовок окна браузера из свойства
+		"CACHE_FILTER" => "N",	// Кешировать при установленном фильтре
+		"CACHE_GROUPS" => "Y",	// Учитывать права доступа
+		"CACHE_TIME" => "36000000",	// Время кеширования (сек.)
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"DETAIL_URL" => "",	// URL, ведущий на страницу с содержимым элемента раздела
+		"DISPLAY_BOTTOM_PAGER" => "N",	// Выводить под списком
+		"DISPLAY_TOP_PAGER" => "N",	// Выводить над списком
+		"ELEMENT_SORT_FIELD" => "sort",	// По какому полю сортируем фотографии
+		"ELEMENT_SORT_ORDER" => "asc",	// Порядок сортировки фотографий в разделе
+		"FIELD_CODE" => array(	// Поля
+			0 => "ID",
+			1 => "NAME",
+			2 => "SORT",
+			3 => "PREVIEW_PICTURE",
+			4 => "",
+		),
+		"FILTER_NAME" => "arrFilter",	// Имя массива со значениями фильтра для фильтрации элементов
+		"IBLOCK_ID" => "7",	// Инфоблок
+		"IBLOCK_TYPE" => "content",	// Тип инфоблока
+		"LINE_ELEMENT_COUNT" => "3",	// Количество фотографий, выводимых в одной строке таблицы
+		"MESSAGE_404" => "",	// Сообщение для показа (по умолчанию из компонента)
+		"META_DESCRIPTION" => "-",	// Установить описание страницы из свойства
+		"META_KEYWORDS" => "-",	// Установить ключевые слова страницы из свойства
+		"PAGER_BASE_LINK_ENABLE" => "N",	// Включить обработку ссылок
+		"PAGER_DESC_NUMBERING" => "N",	// Использовать обратную навигацию
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",	// Время кеширования страниц для обратной навигации
+		"PAGER_SHOW_ALL" => "N",	// Показывать ссылку "Все"
+		"PAGER_SHOW_ALWAYS" => "N",	// Выводить всегда
+		"PAGER_TEMPLATE" => ".default",	// Шаблон постраничной навигации
+		"PAGER_TITLE" => "Фотографии",	// Название категорий
+		"PAGE_ELEMENT_COUNT" => "20",	// Количество элементов на странице
+		"PROPERTY_CODE" => array(	// Свойства
+			0 => "DESC",
+			1 => "URL",
+			2 => "",
+		),
+		"SECTION_CODE" => "",	// Код раздела
+		"SECTION_ID" => $_REQUEST["SECTION_ID"],	// ID раздела
+		"SECTION_URL" => "",	// URL, ведущий на страницу с содержимым раздела
+		"SECTION_USER_FIELDS" => array(	// Свойства раздела
+			0 => "",
+			1 => "",
+		),
+		"SET_LAST_MODIFIED" => "N",	// Устанавливать в заголовках ответа время модификации страницы
+		"SET_STATUS_404" => "N",	// Устанавливать статус 404
+		"SET_TITLE" => "N",	// Устанавливать заголовок страницы
+		"SHOW_404" => "N",	// Показ специальной страницы
+	),
+	false
+);?>
 
-                    </li>
-                    <li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;">
-                        <a class="ss" href="/catalog/tag/space-jam/" onclick=" return promoClick(&#39;9&#39; , &#39;presto-utility&#39;)">
-                            <noindex><img src="<?=SITE_TEMPLATE_PATH;?>/images/1511_Jordan_SLP_P1_Monstars_Desktop.jpg" style="visibility: hidden; position: absolute;"></noindex>
-                            <noindex><video autoplay="" loop="" muted="" id="vid" poster="https://content.nike.com/content/dam/one-nike/en_lu/HO16/Jordan/SLP/1511_Jordan_SLP_P1_Monstars_Desktop.jpg.transform/full-screen/1511_Jordan_SLP_P1_Monstars_Desktop.jpg">
-                                    <source src="http://nikevideo.nike.com/72451143001/201611/1560/72451143001_5195610905001_5195607162001.mp4" type="video/mp4">
-                                </video></noindex></a>
-                        <div class="descSlide">
-                            <div class="titleSlide" style="color: #fff">Подготовься к встрече с монстрами</div>
-                            <div class="textSlide" style="color: #fff">ВЫБИРАЙ НОВУЮ ЭКИПИРОВКУ ДЛЯ СВОЕЙ БИТВЫ ЗА ПОБЕДУ</div>
-                            <!-- <a class="buySlide" href="http://basketshop/catalog/tag/space-jam">Купить</a> -->
-                        </div>
-
-                    </li>
-                    <li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;"> <a href="/catalog/hard/"><img src="<?=SITE_TEMPLATE_PATH;?>/images/hard.jpg" alt=""></a></li><li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 50;"> <a href="/catalog/shoes/adidas/"><img src="<?=SITE_TEMPLATE_PATH;?>/images/adik.jpg" alt=""></a></li><li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;"> <a href="/catalog/search/?s%5Bq%5D=843390-002+843392-002+899620-010&amp;s%5Bbrand_id%5D=%EB%FE%E1%EE%E9&amp;s%5Bbb%5D=%EB%FE%E1%E0%FF&amp;s%5Bf_id%5D=%EB%FE%E1%E0%FF&amp;s%5Bcategory%5D=%EB%FE%E1%E0%FF&amp;s%5Bsize%5D=&amp;s%5Bgender%5D=%EB%FE%E1%EE%E9&amp;s%5Bot%5D=&amp;"><img src="<?=SITE_TEMPLATE_PATH;?>/images/grey.jpg" alt=""></a></li><li style="float: none; list-style: none; position: absolute; width: 1903px; z-index: 0; display: none;"> <a href="/catalog/shoes/basketbal-shoes/y/"><img src="<?=SITE_TEMPLATE_PATH;?>/images/KIdsbanner.jpg" alt=""></a></li>    </ul></div></div>
-    </div>
     <?endif;?>
     <script type="text/javascript">
         $(document).ready(function () {
