@@ -20,6 +20,7 @@ Loc::loadMessages(__FILE__);?>
     <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/slick.css");?>
     <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/slick-theme.css");?>
     <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/media-queries.css");?>
+    <?Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/weather.css");?>
 
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/watch.js", true);?>
     <?Asset::getInstance()->addJs(SITE_TEMPLATE_PATH."/js/analytics.js", true);?>
@@ -81,83 +82,99 @@ Loc::loadMessages(__FILE__);?>
                 )
             );?>" height="80px"></a>
         <div class="catalog-nav">
-            <div class="header-categories">
-                <ul>
-                    <li>
-                        <a href="/catalog/new/">Новинки</a>
-                    </li>
-                    <li class="">
-                        <a href="/catalog/">Бренды<span></span></a>
-                        <ul class="header_cat_children allbrands">
+            <?$APPLICATION->IncludeComponent("bitrix:menu", "topmenu", Array(
+	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+		"DELAY" => "N",	// Откладывать выполнение шаблона меню
+		"MAX_LEVEL" => "2",	// Уровень вложенности меню
+		"MENU_CACHE_GET_VARS" => array(	// Значимые переменные запроса
+			0 => "",
+		),
+		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+		"ROOT_MENU_TYPE" => "left",	// Тип меню для первого уровня
+		"USE_EXT" => "Y",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+	),
+	false
+);?><br>
+            <!--<<div class="header-categories">
+                 ul>
+                     <li>
+                         <a href="/catalog/new/">Новинки</a>
+                     </li>
+                     <li class="">
+                         <a href="/catalog/">Бренды<span></span></a>
+                         <ul class="header_cat_children allbrands">
 
-                            <div class="column" style="width:16%; float: left;">
-                                <li><a href="/catalog/adidas/">adidas</a></li>
-                                <li><a href="/catalog/adidas-originals/">adidas Originals</a></li>
-                                <li><a href="/catalog/asics/">Asics</a></li>
-                                <li><a href="/catalog/brandblack/">Brandblack</a></li>
-                            </div>
-                            <div class="column" style="width:16%; float: left;">
-                                <li><a href="/catalog/casio/">Casio</a></li>
-                                <li><a href="/catalog/converse/">Converse</a></li>
-                                <!--<li><a href="/fred-perry/">Fred Perry</a></li>-->
-                                <li><a href="/catalog/hard/">Hard</a></li>
-                                <li><a href="/catalog/jordan/">Jordan</a></li>
-                            </div>
-                            <div class="column" style="width:16%; float: left;">
-                                <li><a href="/catalog/k1x/">K1x</a></li>
-                                <li><a href="/catalog/levis/">Levi`s</a></li>
-                                <!--<li><a href="/k1x/">k1x</a></li>-->
-                                <li><a href="/catalog/nike/">Nike</a></li>
-                                <li><a href="/catalog/nike-sportswear/">Nike Sportswear</a></li>
+                             <div class="column" style="width:16%; float: left;">
+                                 <li><a href="/catalog/adidas/">adidas</a></li>
+                                 <li><a href="/catalog/adidas-originals/">adidas Originals</a></li>
+                                 <li><a href="/catalog/asics/">Asics</a></li>
+                                 <li><a href="/catalog/brandblack/">Brandblack</a></li>
+                             </div>
+                             <div class="column" style="width:16%; float: left;">
+                                 <li><a href="/catalog/casio/">Casio</a></li>
+                                 <li><a href="/catalog/converse/">Converse</a></li>
 
-                            </div>
-                            <div class="column" style="width:16%; float: left;">
-                                <li><a href="/catalog/nikesb/">Nike SB</a></li>
-                                <li><a href="/catalog/new-balance/">New Balance</a></li>
-                                <li><a href="/catalog/onitsuka-tiger/">Onitsuka Tiger</a></li>
-                                <li><a href="/catalog/penfield/">Penfield</a></li>
+                                 <li><a href="/catalog/hard/">Hard</a></li>
+                                 <li><a href="/catalog/jordan/">Jordan</a></li>
+                             </div>
+                             <div class="column" style="width:16%; float: left;">
+                                 <li><a href="/catalog/k1x/">K1x</a></li>
+                                 <li><a href="/catalog/levis/">Levi`s</a></li>
 
-                            </div>
-                            <div class="column" style="width:16%; float: left;">
-                                <li><a href="/catalog/puma/">Puma</a></li>
-                                <li><a href="/catalog/reebok/">Reebok</a></li>
-                                <li><a href="/catalog/stussy/">Stussy</a></li>
-                                <li><a href="/catalog/north-face/">The North Face</a></li>
-                            </div>
-                            <div class="column" style="width:16%; float: left;">
-                                <li><a href="/catalog/vans/">Vans</a></li>
-                            </div>
-                            <br style="clear:both;">
+                                 <li><a href="/catalog/nike/">Nike</a></li>
+                                 <li><a href="/catalog/nike-sportswear/">Nike Sportswear</a></li>
 
-                        </ul>
-                    </li>
-                    <li class="">
-                        <a href="/catalog/shoes/">Обувь<span></span></a>
-                        <ul style="top: 80px; display: none;" class="header_cat_children">
+                             </div>
+                             <div class="column" style="width:16%; float: left;">
+                                 <li><a href="/catalog/nikesb/">Nike SB</a></li>
+                                 <li><a href="/catalog/new-balance/">New Balance</a></li>
+                                 <li><a href="/catalog/onitsuka-tiger/">Onitsuka Tiger</a></li>
+                                 <li><a href="/catalog/penfield/">Penfield</a></li>
 
-                            <div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/lifestyle-shoes/">Кроссовки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/basketbal-shoes/">Кроссовки баскетбольные</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/keds/">Кеды</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/boots/">Ботинки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/top-boots/">Сапоги</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/sandals/">Сланцы</a></li></div><div class="column" style="width:16%; float: left;"></div></ul>
+                             </div>
+                             <div class="column" style="width:16%; float: left;">
+                                 <li><a href="/catalog/puma/">Puma</a></li>
+                                 <li><a href="/catalog/reebok/">Reebok</a></li>
+                                 <li><a href="/catalog/stussy/">Stussy</a></li>
+                                 <li><a href="/catalog/north-face/">The North Face</a></li>
+                             </div>
+                             <div class="column" style="width:16%; float: left;">
+                                 <li><a href="/catalog/vans/">Vans</a></li>
+                             </div>
+                             <br style="clear:both;">
 
-                    </li>
-                    <li class="">
-                        <a href="/catalog/clothes/">Одежда<span></span></a>
-                        <ul class="header_cat_children">
-                            <div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/sleeveless/">Безрукавки</a></li><li><a href="/catalog/clothes/jeans/">Брюки, джинсы</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/jackets/">Куртки, пуховики</a></li><li><a href="/catalog/clothes/polo/">Поло, рубашки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/crewneck/">Толстовки, свитера</a></li><li><a href="/catalog/clothes/form/">Форма</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/tshirts/">Футболки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/shorts/">Шорты</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/compression/">Компрессионное белье</a></li></div><div class="column" style="width:16%; float: left;"></div></ul>
+                         </ul>
+                     </li>
+                     <li class="">
+                         <a href="/catalog/shoes/">Обувь<span></span></a>
+                         <ul style="top: 80px; display: none;" class="header_cat_children">
 
-                    </li>
-                    <li>
-                        <a href="/catalog/stuff/">Аксессуары<span></span></a>
-                        <ul class="header_cat_children">
+                             <div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/lifestyle-shoes/">Кроссовки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/basketbal-shoes/">Кроссовки баскетбольные</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/keds/">Кеды</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/boots/">Ботинки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/top-boots/">Сапоги</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/shoes/sandals/">Сланцы</a></li></div><div class="column" style="width:16%; float: left;"></div></ul>
 
-                            <div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/caps/">Кепки</a></li><li><a href="/catalog/stuff/glasses/">Очки</a></li><li><a href="/catalog/stuff/gloves/">Перчатки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/bags/">Сумки, рюкзаки</a></li><li><a href="/catalog/stuff/beanie/">Шапки</a></li><li><a href="/catalog/stuff/belts/">Ремни</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/other/">Другое</a></li><li><a href="/catalog/stuff/watch/">Часы</a></li><li><a href="/catalog/stuff/scarf/">Шарфы</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/socks/">Носки</a></li><li><a href="/catalog/stuff/sleeve/">Рукава</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/bands/">Повязки</a></li><li><a href="/catalog/stuff/laces/">Шнурки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/keyring/">Брелки</a></li><li><a href="/catalog/stuff/cleaning/">Чистящие средства</a></li></div><div class="column" style="width:16%; float: left;"></div></ul>
+                     </li>
+                     <li class="">
+                         <a href="/catalog/clothes/">Одежда<span></span></a>
+                         <ul class="header_cat_children">
+                             <div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/sleeveless/">Безрукавки</a></li><li><a href="/catalog/clothes/jeans/">Брюки, джинсы</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/jackets/">Куртки, пуховики</a></li><li><a href="/catalog/clothes/polo/">Поло, рубашки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/crewneck/">Толстовки, свитера</a></li><li><a href="/catalog/clothes/form/">Форма</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/tshirts/">Футболки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/shorts/">Шорты</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/clothes/compression/">Компрессионное белье</a></li></div><div class="column" style="width:16%; float: left;"></div></ul>
 
-                    </li>
-                    <li>
-                        <a href="/catalog/bbals/">Мячи<span></span></a>
-                    </li>
-                    <li><a href="/catalog/sale/">Распродажа</a></li>
+                     </li>
+                     <li>
+                         <a href="/catalog/stuff/">Аксессуары<span></span></a>
+                         <ul class="header_cat_children">
 
-                </ul>
-            </div>
+                             <div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/caps/">Кепки</a></li><li><a href="/catalog/stuff/glasses/">Очки</a></li><li><a href="/catalog/stuff/gloves/">Перчатки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/bags/">Сумки, рюкзаки</a></li><li><a href="/catalog/stuff/beanie/">Шапки</a></li><li><a href="/catalog/stuff/belts/">Ремни</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/other/">Другое</a></li><li><a href="/catalog/stuff/watch/">Часы</a></li><li><a href="/catalog/stuff/scarf/">Шарфы</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/socks/">Носки</a></li><li><a href="/catalog/stuff/sleeve/">Рукава</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/bands/">Повязки</a></li><li><a href="/catalog/stuff/laces/">Шнурки</a></li></div><div class="column" style="width:16%; float: left;"><li><a href="/catalog/stuff/keyring/">Брелки</a></li><li><a href="/catalog/stuff/cleaning/">Чистящие средства</a></li></div><div class="column" style="width:16%; float: left;"></div></ul>
+
+                     </li>
+                     <li>
+                         <a href="/catalog/bbals/">Мячи<span></span></a>
+                     </li>
+                     <li><a href="/catalog/sale/">Распродажа</a></li>
+
+                 </ul>
+            </div>-->
         </div>
         <div class="search" style="position:absolute;right:15px;top:25px;width: 200px">
             <form class="search" enctype="application/x-www-form-urlencoded" action="/catalog/search/" method="get">

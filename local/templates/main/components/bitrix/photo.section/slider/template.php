@@ -13,7 +13,7 @@
 $this->setFrameMode(true);
 ?>
 
-<div class="slideshow" style="z-index: 1">
+<div class="slideshow weather snow" style="z-index: 1">
     <div class="bx-wrapper" style="max-width: 100%;">
         <div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 694px;">
             <ul id="slideshow1" style="width: auto; position: relative; height: 0px;">

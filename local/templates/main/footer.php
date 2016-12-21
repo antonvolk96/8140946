@@ -54,50 +54,22 @@
         <div class="col-xs-2" style="width: 16.66666667%;float: left;">
             <p style="font-size: 12px">© 2003-2016 Магазин Streetball</p>
         </div>
-        <div class="col-xs-2 text-uppercase" style="width: 16.66666667%;float: left;">
-            <ul>
-                <li><a href="http://www.basketshop.ru/index">Интернет-магазин</a></li>
-                <li><a href="http://www.basketshop.ru/info/vacancy/">Вакансии</a></li>
-                <li><a href="http://www.basketshop.ru/info/how-to-order/">Оплата и доставка</a></li>
-                <li><a href="http://www.basketshop.ru/info/return-policy">Возврат</a></li>
-                <li><a href="http://www.basketshop.ru/info/contacts/">Контакты</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-2 text-uppercase" style="width: 16.66666667%;float: left;">
-            <ul>
-                <li><a href="http://www.basketshop.ru/catalog/for-man/" onclick="">Мужское</a></li>
-                <li><a href="http://www.basketshop.ru/catalog/women/">Женское</a></li>
-                <li><a href="http://www.basketshop.ru/catalog/y/">Детское</a></li>
-            </ul>
-            <ul>
-                <li><a href="http://www.basketshop.ru/catalog/new/">Новинки</a></li>
-                <li><a href="http://www.basketshop.ru/catalog/brands/">Бренды</a></li>
-                <li><a href="http://www.basketshop.ru/catalog/shoes/sneakers/">Кроссовки</a></li>
-                <li><a href="http://www.basketshop.ru/catalog/clothes/">Одежда</a></li>
-                <li><a href="http://www.basketshop.ru/catalog/sale/">Распродажа</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-1 text-uppercase" style="width: 8.33333333%;float: left;">
 
-            <ul>
-                <li><a href="http://www.basketshop.ru/blog/">Блог</a></li>
-                <li><a href="http://www.basketshop.ru/guestbook/">Гостевая</a></li>
-                <li><a href="http://www.basketshop.ru/info/podpiska/">Подписаться</a></li>
-            </ul>
-        </div>
-        <div class="col-xs-2 footer-social" style="width: 16.66666667%;float: left;">
+
+
+        <div class="col-xs-2 footer-social" style="width: 16.66666667%;float: right;">
             <ul>
                 <li><a href="https://vk.com/streetball_store" target="_blank">
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/images/vk.png" alt="" title="" />
+                        <img src="/local/templates/main/images/vk.png" alt="" title="">
                     </a>
                 </li>
                 <li><a href="http://instagram.com/streetballrussia/" target="_blank">
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/images/inst.png" alt="" title="" /></a>
+                        <img src="/local/templates/main/images/inst.png" alt="" title=""></a>
                 </li>
             </ul>
         </div>
-        <div class="col-xs-3 text-right" style="width: 25%;float: left;text-align: right;">
-            <p><img src="<?=SITE_TEMPLATE_PATH;?>/images/verifed_by_visa.png" alt="Verifed by Visa"> <img src="<?=SITE_TEMPLATE_PATH;?>/images/mastercard_securecode.png" alt="Mastercard secure code"></p>
+        <div class="col-xs-3 text-right" style="width: 25%;float: right;text-align: right;">
+            <p><img src="/local/templates/main/images/verifed_by_visa.png" alt="Verifed by Visa"> <img src="/local/templates/main/images/mastercard_securecode.png" alt="Mastercard secure code"></p>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -253,15 +225,15 @@
         <!--сверстаный блок -->
         <div id="rr-500popup" style="position:fixed;top: 0;left: 0;width: 100%;height:100%;z-index: 1000;background-color: rgba(0,0,0,.7);">
             <div class="popup" style="">
-                <a href="http://www.basketshop.ru/#" onclick="rr500close(this,event)" style="margin-left: 482px;font-size: 19px;text-decoration:none">&#215;</a>
+                <a href="http://www.basketshop.ru/#" onclick="rr500close(this,event)" style="margin-left: 482px;font-size: 19px;text-decoration:none">×</a>
                 <div id="rr-500popup-content">
-                    <img src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png">
+                    <img src="/local/templates/main/images/logo.png">
                     <form class="retailrocket-subscribe-form" id="rr-500popup-form" onsubmit="rr500checkForm(this);return false;">
                         <div class="rr-subscribe-input-checkbox">
                             <label>Подпишитесь, и вы получите письма <br> о новых коллекциях и распродажах</label>
                         </div>
                         <div class="retailrocket-subscribe-info"></div>
-                        <input id="rr-500popup-email" type="email" placeholder="Ваш E-mail" onfocus="this.className=this.className.replace(&#39;rr-error&#39;,&#39;&#39;)">
+                        <input id="rr-500popup-email" type="email" placeholder="Ваш E-mail" onfocus="this.className=this.className.replace('rr-error','')">
                         <input id="rr-500popup-btn" style="border: none;" type="submit" value="Подписаться">
                     </form>
                 </div>
