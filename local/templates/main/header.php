@@ -281,8 +281,9 @@ Loc::loadMessages(__FILE__);?>
 	),
 	false
 );?>
-
     <?endif;?>
+
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#slideshow1').bxSlider({
