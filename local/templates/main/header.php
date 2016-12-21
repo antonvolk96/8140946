@@ -322,69 +322,13 @@ Loc::loadMessages(__FILE__);?>
 
     <div class="body-wrap">
         <?if ($GLOBALS["APPLICATION"]->GetCurPage() == "/"):?>
-        <div class="new_arrival"><a href="/catalog/new/">НОВИНКИ</a></div>
-
-        <div style="margin-top: 0px;">
-            <div class="catalog_main clearafter" style="margin:0 auto;width:1162px;">
-
-
-                <div class="item wrap rel">
-                    <div class="content">
-                        <a href="/catalog/item/28813/" class="a"><img class="img" src="<?=SITE_TEMPLATE_PATH;?>/images/S79986(10)im.JPG" alt="Hamburg adidas Originals"></a>
-                        <div class="info">
-                            <span class="name">Кроссовки  adidas Originals Hamburg</span>
-                            <div class="new"></div>
-                            <div class="art">S79986</div>
-                            <div class="price">6690р.</div>
-                        </div><div style="display:none;" class="item_sizes">7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5</div></div>
-                    <div class="ltc"></div><div class="lbc"></div><div class="rbc"></div><div class="rtc"></div>
-                </div>
-                <div class="item wrap rel">
-                    <div class="content">
-                        <a href="/catalog/item/28958/" class="a"><img class="img" src="<?=SITE_TEMPLATE_PATH;?>/images/IMG_5943im.JPG" alt="CL Leather 1895 Reebok"></a>
-                        <div class="info">
-                            <span class="name">Кроссовки Reebok CL Leather 1895</span>
-                            <div class="new"></div>
-                            <div class="art">AQ9970</div>
-                            <div class="price">7690р.</div>
-                        </div><div style="display:none;" class="item_sizes">7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12</div></div>
-                    <div class="ltc"></div><div class="lbc"></div><div class="rbc"></div><div class="rtc"></div>
-                </div>
-                <div class="item wrap rel">
-                    <div class="content">
-                        <a href="/catalog/item/28793/" class="a"><img class="img" src="<?=SITE_TEMPLATE_PATH;?>/images/700155-401(9)im.JPG" alt="Air Max 90 Premium Nike sportswear"></a>
-                        <div class="info">
-                            <span class="name">Кроссовки Nike Air Max 90 Premium</span>
-                            <div class="new"></div>
-                            <div class="art">700155-401</div>
-                            <div class="price">8990р.</div>
-                        </div><div style="display:none;" class="item_sizes">8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 15</div></div>
-                    <div class="ltc"></div><div class="lbc"></div><div class="rbc"></div><div class="rtc"></div>
-                </div>
-                <div class="item wrap rel">
-                    <div class="content">
-                        <a href="/catalog/item/28961/" class="a"><img class="img" src="<?=SITE_TEMPLATE_PATH;?>/images/IMG_5965im.JPG" alt="GS CL Leather Reebok"></a>
-                        <div class="info">
-                            <span class="name">Кроссовки Reebok GS CL Leather</span>
-                            <div class="new"></div>
-                            <div class="art">AR2632</div>
-                            <div class="price">8990р.</div>
-                        </div><div style="display:none;" class="item_sizes">8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 12.5, 13, 14, 15</div></div>
-                    <div class="ltc"></div><div class="lbc"></div><div class="rbc"></div><div class="rtc"></div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="new_arrival"> <a href="/catalog/brands/">БРЕНДЫ</a></div>
-        <div class="banner_brands clearafter" style="width:1162px;margin:10px auto;">
-            <a class="round5" href="/catalog/nike/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/main_nike.jpg" alt=""></a><a class="round5" href="/catalog/adidas/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/adisas_main 1x1.jpg" alt=""></a><a class="round5" href="/catalog/jordan/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/01Mjae.jpg" alt=""></a><a class="round5" href="/catalog/hard/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/4.jpg" alt=""></a>  	</div>
 
         <div class="new_arrival" style="height:120px;line-height:120px;font-size:42px;text-align:center;"><a>КАТАЛОГ</a></div>
         <div class="banner_cats1 clearafter" style="width:1162px;margin:10px auto 4px auto;">
-            <a href="/catalog/shoes/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/q7jQOz.jpg" alt=""></a><a href="/catalog/clothes/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/bgpyRy.jpg" alt=""></a>	</div>
-        <div class="banner_cats clearafter" style="width:1162px;margin:10px auto 50px auto;">
-            <a href="/catalog/trening/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/70aurp.jpg" alt=""></a><a href="/catalog/stuff/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/qSj3Pn.jpg" alt=""></a><a href="/catalog/bbals/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/VRovpE.jpg" alt=""></a>
+            <a href="/catalog/obuv/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/q7jQOz.jpg" alt=""></a><a href="/catalog/odezhdagit/" style=""><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/bgpyRy.jpg" alt=""></a>	</div>
+            <div class="banner_cats clearafter" style="width:1162px;margin:10px auto 50px auto;">
+                <a href="/catalog/aksessuary/" style="margin:auto; width: 378px; display: block;float: none; "><img class="round5" src="<?=SITE_TEMPLATE_PATH;?>/images/qSj3Pn.jpg" alt=""></a>
             </div>
+
         <?endif;?>
         <div class="row">
