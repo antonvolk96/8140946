@@ -11,7 +11,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
         $arResult['ERROR'])); ?>
 <? endif; ?>
 <div style="padding: 10px; width: 500px; margin: auto;">
-    Количество проданных заказов из каждого отдела за период:
+    Количество поданных жалоб из каждого отдела за период:
 <form action="<?= POST_FORM_ACTION_URI ?>" method="POST" name="complaintsform">
     <select name="UF_PERIOD" onchange="complaintsform.submit();">
         <? foreach ($arResult['PERIOD_ITEMS'] as $arItem): ?>
